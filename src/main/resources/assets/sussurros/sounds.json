@@ -1,0 +1,13 @@
+{
+	"whisper": { "sounds": ["sussurros:whisper1", "sussurros:whisper2", "sussurros:whisper3"] },
+	"breath": { "sounds": ["sussurros:breath"] },
+	"heartbeat": { "sounds": ["sussurros:heartbeat"] },
+	"knock": { "sounds": ["sussurros:knock1", "sussurros:knock2"] },
+	"sting": { "sounds": ["sussurros:sting"] },
+	"static": { "sounds": ["sussurros:static"] },
+	"drone": { "sounds": ["sussurros:drone"] },
+	"musicbox": { "sounds": ["sussurros:musicbox"] },
+	"cry": { "sounds": ["sussurros:cry"] },
+	"scratch": { "sounds": ["sussurros:scratch"] },
+	"growl": { "sounds": ["sussurros:growl"] }
+}

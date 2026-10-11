@@ -1,0 +1,23 @@
+{
+	"schemaVersion": 1,
+	"id": "sussurros",
+	"version": "${version}",
+	"name": "Sussurros do Vazio",
+	"description": "Mod de terror psicologico: um sistema de sanidade e dezenas de eventos que fazem voce duvidar do que ve e do que ouve.",
+	"authors": [],
+	"contact": {},
+	"license": "CC0-1.0",
+	"icon": "assets/sussurros/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.sussurros.SussurrosMod"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
