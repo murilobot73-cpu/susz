@@ -1,0 +1,37 @@
+# Compila o mod automaticamente no GitHub.
+# Roda a cada envio de arquivos (push) e tambem pelo botao "Run workflow" na aba Actions.
+# O jar pronto aparece no fim da execucao, na secao "Artifacts" (arquivo sussurros-mod).
+
+name: build
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v6
+      - name: validate gradle wrapper
+        uses: gradle/actions/wrapper-validation@v6
+      - name: setup jdk
+        uses: actions/setup-java@v5
+        with:
+          java-version: '25'
+          distribution: 'microsoft'
+      - name: make gradle wrapper executable
+        run: chmod +x ./gradlew
+      - name: build
+        run: ./gradlew build
+      - name: list built files
+        run: ls -la build/libs/
+      - name: upload the mod jar
+        uses: actions/upload-artifact@v7
+        with:
+          name: sussurros-mod
+          path: |
+            build/libs/*.jar
+            !build/libs/*-sources.jar
+          if-no-files-found: error
